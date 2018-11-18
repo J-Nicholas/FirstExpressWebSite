@@ -1,0 +1,24 @@
+
+img {
+    max-height: 100%;
+    max-width: 100%;
+}
+
+
+
+/* Change link colour on footer*/
+
+a:Link.footerLink {
+    color: #3d72be;
+    color: beige;
+}
+a:Visited.footerLink {
+    color: #3d72be;
+    color: beige;
+}
+
+.col-centered {
+    float:none;
+    margin: 0 auto;
+    padding:10px;
+}

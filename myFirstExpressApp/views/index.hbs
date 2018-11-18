@@ -1,0 +1,173 @@
+<style>
+    .no-padding {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+</style>
+
+<!-- Top Picture -->
+<div class="container-fluid no-padding">
+    <img src="images\rugby-short.jpg" alt="" class="img-fluid no-padding">
+</div>
+
+<!-- Welcome message -->
+<div class="container" style="padding-top: 10px; padding-bottom: 10px;">
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <h2>Welcome to Galway Rugby Club</h2>
+        </div>
+    </div>
+</div>
+
+<!-- Latest News Card -->
+<div class="container">
+    <div class="card bg-light" style="padding-bottom: 10px;" id="latest">
+        <div class="card-header">
+            Latest News
+        </div>
+        <div class="card-body">
+            <h5 class="card-title">Galway Rugby Club suffers landslide defeat against Mayo RC</h5>
+            <p>
+                Galway RC has suffered a tragic defeat against Mayo RC in the final round.
+                A fund has been set up for people suffering from emotional trauma.
+            </p>
+            <a href="#" class="btn btn-secondary">Donate</a>
+
+            <br><br>
+            <h5 class="card-title">Galway Rugby Club jerseys now on sale!</h5>
+            <p>
+                Get yours now from the online club store!
+            </p>
+            <a href="#" class="btn btn-secondary">Shop</a>
+            <br><br>
+            <h5 class="card-title">Stadium Upgrades</h5>
+            <p>
+                The stadium has received funding to upgrade the stands in order to
+                increase capacity. A new bar is also being built in the stadium.
+            </p>
+        </div>
+    </div>
+</div>
+
+<!-- Fixtures Card -->
+<div class="container" style="padding-top: 30px">
+    <div class="card" id="fixtures">
+        <div class="card-header">
+            Fixtures
+        </div>
+        <div class="card-body">
+            <ul class="list-group">
+                <li class="list-group-item text-center">Sat 13th Oct Galway RC V Sligo RC</li>
+                <li class="list-group-item text-center">Sat 20th Oct Mayo RC V Galway RC</li>
+                <li class="list-group-item text-center">Sat 27th Oct Tipperary RC V Galway RC</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!-- Members cards -->
+<div class="container" id="members" style="padding-top: 30px; padding-bottom: 30px;">
+    <h3>Meet the Staff</h3>
+    <div class="row">
+
+        <!-- Chairperson Card -->
+        <div class="col-lg-4 col-sm-12 col-md-4 col-xs-12">
+            <div class="card h-100">
+                <div class="card-header text-center">
+                    Chairperson
+                </div>
+                <div class="card-body">
+                    <img src="images/chairperson.png" class="img-round img-fluid">
+                    <br><br>
+                    <h5 class="text-center">Terry</h5>
+                    <p>
+                        Terry deals with the day to day responsibilities of the club
+                        and is the public figure-head of the club.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Secretary Card -->
+        <div class="col-lg-4 col-sm-12 col-md-4 col-xs-12">
+            <div class="card h-100">
+                <div class="card-header text-center">
+                    Secretary
+                </div>
+                <div class="card-body">
+                    <img src="images/secretary.png" class="img-round img-fluid">
+                    <br><br>
+                    <h5 class="text-center">Paddy</h5>
+                    <p>
+                        Paddy is responsible for keeping track of all decisions made by the club.
+                        He is also responsible for writing down notes at all club meetings.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Treasurer Card -->
+        <div class="col-lg-4 col-sm-12 col-md-4 col-xs-12">
+
+            <div class="card h-100">
+                <div class="card-header text-center">
+                    Treasurer
+                </div>
+                <div class="card-body">
+                    <img src="images/treasurer.png" class="img-round img-fluid">
+                    <br><br>
+                    <h5 class="text-center">Tom</h5>
+                    <p>
+                        Tom keeps track of the finances of the club, the incoming earnings and the
+                        outgoing expenditure.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Comment section -->
+
+<div class="container" style="margin-bottom: 40px;">
+    <h3>Comments</h3>
+    <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <div class="card h-100">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6 col-sm-9 col-xs-9 col-centered" >
+                            <span id="hideComments">
+                                <button type='button' id='hideCommentBtn' class='btn btn-light'>Hide comments</button>
+                            </span>
+                            <span id="commentSection"></span>
+                            <!-- Use Jquery and Js to insert comment cards here -->
+
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-9 col-sm-9 col-lg-6 col-md-6 col-centered">
+                            <form class="form-horizontal">
+                                <div class="form-group has-error has-feedback" >
+                                    <label for="handle" class="form-control-label"><b>Handle</b></label>
+                                    <input type="text" value="@" class="form-control" id="handle" maxlength="15" onkeydown="if(event.keyCode == 32) return false">
+                                    <div class="invalid-feedback" id="validityFeedback"></div>
+                                </div>
+                                <div class="form-group has-error has-feedback">
+                                    <label for="comment" class="form-control-label"><b>Comment</b></label>
+                                    <textarea class="form-control font-weight-light font-italic" rows="5" id="comment">Type your comment</textarea>
+                                    <div class="invalid-feedback" id="commentFeedback"></div>
+                                </div>
+                                <div class="form-group col-12 text-center">
+                                    <input type="submit" class="btn btn-secondary btn-block col-centered" disabled id="postComment">
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
